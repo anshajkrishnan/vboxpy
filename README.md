@@ -22,7 +22,7 @@ This script automates the installation of VirtualBox (on Linux) and the creation
    ```
 2. Install dependencies:
    ```bash
-   pip install -r requirements.txt  # If a requirements file is provided
+   pip install -r requirements.txt
    ```
 
 ## Usage
