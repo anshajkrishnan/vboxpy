@@ -1,2 +1,2 @@
-# Assigments
+# Assignments
 Coding Test Assignment
