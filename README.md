@@ -20,7 +20,7 @@ This script automates the installation of VirtualBox (on Linux) and the creation
    git clone https://github.com/anshajkrishnan/vboxpy.git
    cd vboxpy
    ```
-2. Install dependencies (if any):
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt  # If a requirements file is provided
    ```
