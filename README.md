@@ -17,8 +17,8 @@ This script automates the installation of VirtualBox (on Linux) and the creation
 ## Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/anshajkrishnan/Assignments.git
-   cd Assignments
+   git clone https://github.com/anshajkrishnan/vboxpy.git
+   cd vboxpy
    ```
 2. Install dependencies (if any):
    ```bash
