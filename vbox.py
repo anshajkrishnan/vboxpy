@@ -49,8 +49,8 @@ def create_vm(vm_name, os_type, memory, disk_size, iso_path):
 
 
 if __name__ == '__main__':
-    install_virtualbox()
     vm_name = input(f"Enter VM Name: ")
+    install_virtualbox()
     sys.stdout.flush()
     choices = ['Ubuntu_64', 'Windows_64']
     print("Select Os Type")
