@@ -23,8 +23,12 @@ def create_vm(vm_name, os_type, memory, disk_size, iso_path):
     logger.info(f"Creating Virtual Machine {vm_name}")
     subprocess.run(['VBoxManage', 'createvm', '--name', vm_name, '--ostype', os_type, '--register'], check=True)
     subprocess.run(
-        ['VBoxManage', 'modifyvm', vm_name, '--memory', str(memory), '--vram', '16', '--nic1', 'nat', '--natpf1',
-         'ssh,tcp,,2222,,22'])
+        [
+            'VBoxManage', 'modifyvm', vm_name, '--memory', str(memory), '--vram', '16',
+            '--nic1', 'nat', '--natpf1', 'ssh,tcp,,2222,,22'
+        ],
+        check=True,
+    )
     subprocess.run(['VBoxManage', 'createhd', '--filename', f"{vm_name}.vdi", '--size', str(disk_size)], check=True)
     subprocess.run(['VBoxManage', 'storagectl', vm_name, '--name', 'SATA Controller', '--add', 'sata', '--controller',
                     "IntelAhci"], check=True)
