@@ -14,7 +14,7 @@ def install_virtualbox():
         logger.info("Installing Virtual Box On Linux\n")
         subprocess.run(['sudo', 'apt-get', 'update'], check=True)
         subprocess.run(['sudo', 'apt-get', 'install', '-y', 'virtualbox'], check=True)
-        logger.info(f"Virtual Box Installed Succesfully \n")
+        logger.info(f"Virtual Box Installed Successfully \n")
     else:
         print(f"Unsupported Os")
 
@@ -44,7 +44,7 @@ def create_vm(vm_name, os_type, memory, disk_size, iso_path):
     subprocess.run(
         ['VBoxManage', 'storageattach', vm_name, '--storagectl', 'IDE Controller', '--port', '1', '--device', '0',
          '--type', 'dvddrive', '--medium', iso_path], check=True)
-    logger.info(f"VM {vm_name} created and iso image attached succesfully")
+    logger.info(f"VM {vm_name} created and iso image attached Successfully")
 
     # start vm
 
